@@ -1,0 +1,101 @@
+.main {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fbbf24;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #93c5fd;
+  font-weight: 300;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.categoryCard {
+  background: #0f1f3d;
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: block;
+  color: inherit;
+  border: 2px solid #1e3a5f;
+}
+
+.categoryCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(251, 191, 36, 0.3);
+  border-color: #fbbf24;
+}
+
+.categoryIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.categoryName {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 12px;
+}
+
+.categoryDescription {
+  font-size: 1rem;
+  color: #93c5fd;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.challengeCount {
+  display: inline-block;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #0a1628;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #93c5fd;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+}

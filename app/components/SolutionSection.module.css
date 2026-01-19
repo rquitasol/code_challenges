@@ -1,0 +1,78 @@
+.solution {
+  padding: 40px;
+  border-top: 1px solid #1e3a5f;
+  background: #0a1628;
+}
+
+.solutionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.solutionHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0;
+}
+
+.toggleButton {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #0a1628;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+
+.toggleButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.5);
+}
+
+.toggleButton:active {
+  transform: translateY(0);
+}
+
+.solutionContent pre {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background: #0f1f3d;
+  border: 1px solid #1e3a5f;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.solutionHint {
+  color: #93c5fd;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 30px;
+  background: #0f1f3d;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px dashed #1e3a5f;
+}
+
+@media (max-width: 768px) {
+  .solution {
+    padding: 30px 20px;
+  }
+
+  .solutionHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .toggleButton {
+    width: 100%;
+  }
+}

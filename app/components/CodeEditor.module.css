@@ -1,0 +1,303 @@
+.editorContainer {
+  margin: 2rem 0;
+  border: 1px solid #1e3a5f;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0f1f3d;
+}
+
+.editorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #0a1628;
+  border-bottom: 1px solid #1e3a5f;
+}
+
+.editorTitle {
+  font-size: 0.875rem;
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+.editorActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.resetButton,
+.runButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resetButton {
+  background: transparent;
+  color: #93c5fd;
+  border: 1px solid #1e3a5f;
+}
+
+.resetButton:hover {
+  background: #1e3a5f;
+  color: #fbbf24;
+}
+
+.runButton {
+  background: #fbbf24;
+  color: #0a1628;
+  font-weight: 600;
+}
+
+.runButton:hover:not(:disabled) {
+  background: #f59e0b;
+  transform: translateY(-1px);
+}
+
+.runButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.editor {
+  background: #0f1f3d;
+}
+
+.testResults {
+  padding: 1rem;
+  background: #0a1628;
+  border-top: 1px solid #1e3a5f;
+}
+
+.testResultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testResultsHeader h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #93c5fd;
+}
+
+.allPassed {
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.someFailed {
+  color: #f56565;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.testResultsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.testResult {
+  border: 1px solid #1e3a5f;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.testResult.passed {
+  border-left: 3px solid #fbbf24;
+}
+
+.testResult.failed {
+  border-left: 3px solid #f56565;
+}
+
+.testResultHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #0f1f3d;
+}
+
+.testIndex {
+  font-weight: 600;
+  color: #93c5fd;
+  font-size: 0.875rem;
+}
+
+.testStatus {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.testResult.passed .testStatus {
+  color: #fbbf24;
+}
+
+.testResult.failed .testStatus {
+  color: #f56565;
+}
+
+.testResultBody {
+  padding: 1rem;
+  background: #061020;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.testResultRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.testLabel {
+  min-width: 80px;
+  color: #60a5fa;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.testValue {
+  flex: 1;
+  padding: 0.5rem;
+  background: #0f1f3d;
+  border: 1px solid #1e3a5f;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 0.875rem;
+  color: #93c5fd;
+}
+
+.errorValue {
+  border-color: #f56565;
+  color: #fc8181;
+}
+
+.console {
+  border-top: 1px solid #1e3a5f;
+  background: #0a1628;
+  min-height: 150px;
+}
+
+.consoleHeader {
+  padding: 0.75rem 1rem;
+  background: #0f1f3d;
+  border-bottom: 1px solid #1e3a5f;
+  font-size: 0.875rem;
+  color: #fbbf24;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clearButton {
+  background: transparent;
+  border: 1px solid #1e3a5f;
+  color: #93c5fd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clearButton:hover {
+  background: #1e3a5f;
+  color: #fbbf24;
+}
+
+.consoleOutput {
+  padding: 1rem;
+  min-height: 120px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: "Courier New", monospace;
+  font-size: 0.875rem;
+  background: #061020;
+}
+
+.consoleEmpty {
+  color: #4a5568;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.consoleLog {
+  padding: 0.5rem 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #0f1f3d;
+}
+
+.consoleLog:last-child {
+  border-bottom: none;
+}
+
+.logIcon {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+.consoleLog.log {
+  color: #93c5fd;
+}
+
+.consoleLog.error {
+  color: #fc8181;
+  background: rgba(252, 129, 129, 0.05);
+  padding: 0.5rem;
+  border-radius: 4px;
+  border-left: 3px solid #fc8181;
+}
+
+.consoleLog.warn {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
+  border-left: 3px solid #fbbf24;
+}
+
+@media (max-width: 768px) {
+  .editorHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .editorActions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .resetButton,
+  .runButton {
+    flex: 1;
+  }
+
+  .testResultRow {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .testLabel {
+    min-width: auto;
+  }
+}
